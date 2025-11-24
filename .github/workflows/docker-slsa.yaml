@@ -1,19 +1,22 @@
 name: Build and Push Docker Image - SLSA
 
 on:
-  #push:
-  #  paths:
-  #    - "API/**"
-  #  branches:
-  #    - main
+  push:
+    paths:
+      - "API/**"
+    branches:
+      - main
   workflow_dispatch: {}
 
 env:
-  OCTOPUS_URL: https://your.octopus.app
-  OCTOPUS_SERVICE_ACCOUNT: service account id
-  OCTOPUS_SPACE: Your space
-  DOCKER_HUB_REPOSITORY: Your docker hub repository
-  SBOM_PACKAGE: YourApp.SBOM
+  OCTOPUS_URL: https://wrg.octopus.app
+  OCTOPUS_SERVICE_ACCOUNT: b45a10cc-1380-480d-ab25-28e36d54cd63
+  OCTOPUS_SPACE: New Cascadia Imports
+  DOCKER_HUB_REPOSITORY: octopussolutionsengineering/insurance-wise-claim-service
+  SBOM_PACKAGE: InsuranceWise.ClaimService.SBOM
+  ARTIFACTORY_URL: https://artifactory.octopussamples.com/artifactory
+  ARTIFACTORY_REPOSITORY: demo-octopus-app-generic
+  ARTIFACTORY_ORG: app.octopus.wrg.new-cascadia-imports
 
 jobs:
   configure:
