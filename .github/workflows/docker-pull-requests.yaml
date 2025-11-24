@@ -70,4 +70,4 @@ jobs:
           project: ${{ env.OCTOPUS_PROJECT }}
           custom_fields: branch:${{ github.head_ref }}
           package_version: ${{ steps.version-generator.outputs.version }}
-          channel: ${{ env.OCTOPUS_CHANNEL }}
+          channel: "Ephemeral Environments"
